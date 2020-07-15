@@ -26,7 +26,7 @@ module.exports = {
     },
     skillType: {
       type: Select,
-      options: "Frontend, Backend, UI and UX Deisgn, Cloud Platform, Project Management, Machine Learning, Language, SEO, Other "
+      options: ['Frontend', 'Backend','UI', 'CP', 'PM', 'ML', 'Language', 'SEO', 'Other']
     }
   },
   access: {

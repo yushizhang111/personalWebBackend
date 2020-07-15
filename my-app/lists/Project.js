@@ -39,7 +39,7 @@ module.exports = {
     },
     projectType: {
       type: Select,
-      options: "student, apollo, jr"
+      options: ['student', 'apollo', 'jr']
     },
     skills: {
       type: Relationship,
