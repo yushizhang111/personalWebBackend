@@ -35,49 +35,27 @@ module.exports = {
   fields: {
     uni: {
       type: Text,
-      isRequired: true
+      isRequired: true,
     },
     degree: {
       type: Text,
-      isRequired: true
+      isRequired: true,
     },
     description: {
-      type: Text
+      type: Text,
     },
-    project: {
-      type: Relationship,
-      ref: "Project",
-      many: true
-    },
-    skills: {
-      type: Relationship,
-      ref: "Skill",
-      many: true
-    },
-    brandImage: { type: CloudinaryImage, adapter: cloudinaryAdapter },
-    thumbnailImage: { type: CloudinaryImage, adapter: cloudinaryAdapter },
     start: {
-      type: CalendarDay,
-      format: "Do MMMM YYYY",
-      yearRangeFrom: "2000",
-      yearRangeTo: "2029",
-      isRequired: false,
-      defaultValue: new Date().toISOString("YYYY-MM-DD").substring(0, 10)
+      type: Text,
     },
     end: {
-      type: CalendarDay,
-      format: "Do MMMM YYYY",
-      yearRangeFrom: "2000",
-      yearRangeTo: "2029",
-      isRequired: false,
-      defaultValue: new Date().toISOString("YYYY-MM-DD").substring(0, 10)
-    }
+      type: Text,
+    },
   },
   access: {
     read: true,
     update: access.userIsAdminOrOwner,
     create: access.userIsAdmin,
     delete: access.userIsAdmin,
-    auth: true
-  }
+    auth: true,
+  },
 };
