@@ -10,7 +10,7 @@ const userOwnsItem = ({ authentication: { item: user } }) => {
   return { id: user.id };
 };
 
-const userIsAdminOrOwner = auth => {
+const userIsAdminOrOwner = (auth) => {
   const isAdmin = access.userIsAdmin(auth);
   const isOwner = access.userOwnsItem(auth);
   return isAdmin ? isAdmin : isOwner;
@@ -27,15 +27,15 @@ module.exports = {
     skillType: {
       type: Select,
       options: [
-        "Frontend",
-        "Backend",
-        "UI",
-        "CP",
-        "PM",
-        "ML",
-        "Language",
-        "SEO",
-        "Other",
+        { value: "Frontend", label: "Front End" },
+        { value: "Backend", label: "Back End" },
+        { value: "UI", label: "UI and UX Design" },
+        { value: "CP", label: "Cloud Platform" },
+        { value: "PM", label: "Project Management" },
+        { value: "ML", label: "Machine Learning" },
+        { value: "Language", label: "Language" },
+        { value: "SEO", label: "SEO" },
+        { value: "Other", label: "Other" }
       ],
       dataType: "string",
     },
