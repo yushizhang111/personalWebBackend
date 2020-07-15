@@ -55,7 +55,8 @@ module.exports = {
     },
     brandImage: { type: String },
     body: {
-      type: Content,
+      type: Text,
+      many:true
     },
     rank: {
       type: Integer,
