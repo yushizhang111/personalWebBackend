@@ -22,18 +22,29 @@ module.exports = {
   fields: {
     name: {
       type: Text,
-      isRequired: true
+      isRequired: true,
     },
     skillType: {
       type: Select,
-      options: ['Frontend', 'Backend','UI', 'CP', 'PM', 'ML', 'Language', 'SEO', 'Other']
-    }
+      options: [
+        "Frontend",
+        "Backend",
+        "UI",
+        "CP",
+        "PM",
+        "ML",
+        "Language",
+        "SEO",
+        "Other",
+      ],
+      dataType: "string",
+    },
   },
   access: {
     read: true,
     update: access.userIsAdminOrOwner,
     create: access.userIsAdmin,
     delete: access.userIsAdmin,
-    auth: true
-  }
+    auth: true,
+  },
 };

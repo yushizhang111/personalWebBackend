@@ -31,20 +31,21 @@ module.exports = {
   fields: {
     name: {
       type: Text,
-      isRequired: true
+      isRequired: true,
     },
     description: {
       type: Text,
-      isRequired: true
+      isRequired: true,
     },
     projectType: {
       type: Select,
-      options: ['student', 'apollo', 'jr']
+      options: ["student", "apollo", "jr"],
+      dataType: "string",
     },
     skills: {
       type: Relationship,
       ref: "Skill",
-      many: true
+      many: true,
     },
     link: {
       type: Text,
@@ -55,7 +56,7 @@ module.exports = {
     detailImageMiddle: { type: CloudinaryImage, adapter: cloudinaryAdapter },
     detailImageRight: { type: CloudinaryImage, adapter: cloudinaryAdapter },
     body: {
-      type: Content
+      type: Content,
     },
     start: {
       type: CalendarDay,
@@ -63,7 +64,7 @@ module.exports = {
       yearRangeFrom: "2000",
       yearRangeTo: "2029",
       isRequired: false,
-      defaultValue: new Date().toISOString("YYYY-MM-DD").substring(0, 10)
+      defaultValue: new Date().toISOString("YYYY-MM-DD").substring(0, 10),
     },
     end: {
       type: CalendarDay,
@@ -71,14 +72,14 @@ module.exports = {
       yearRangeFrom: "2000",
       yearRangeTo: "2029",
       isRequired: false,
-      defaultValue: new Date().toISOString("YYYY-MM-DD").substring(0, 10)
-    }
+      defaultValue: new Date().toISOString("YYYY-MM-DD").substring(0, 10),
+    },
   },
   access: {
     read: true,
     update: access.userIsAdminOrOwner,
     create: access.userIsAdmin,
     delete: access.userIsAdmin,
-    auth: true
-  }
+    auth: true,
+  },
 };
