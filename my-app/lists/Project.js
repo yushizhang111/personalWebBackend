@@ -4,6 +4,7 @@ const {
   CloudinaryImage,
   Relationship,
   Select,
+  Integer
 } = require("@keystonejs/fields");
 const { Content } = require("@keystonejs/field-content");
 const { CloudinaryAdapter } = require("@keystonejs/file-adapters");
