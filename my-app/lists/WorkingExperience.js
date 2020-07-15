@@ -3,6 +3,7 @@ const {
   CalendarDay,
   CloudinaryImage,
   Relationship,
+  Integer
 } = require("@keystonejs/fields");
 const { CloudinaryAdapter } = require("@keystonejs/file-adapters");
 
@@ -41,6 +42,9 @@ module.exports = {
       type: Text,
       isRequired: true,
     },
+    linkedin: {
+      type: Text,
+    },
     start: {
       type: Text,
     },
@@ -50,6 +54,9 @@ module.exports = {
     description: {
       type: Text,
     },
+    rank: {
+      type:Integer
+    }
   },
   access: {
     read: true,
