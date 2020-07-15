@@ -4,7 +4,7 @@ const {
   CloudinaryImage,
   Relationship,
   Select,
-  Integer
+  Integer,
 } = require("@keystonejs/fields");
 const { Content } = require("@keystonejs/field-content");
 const { CloudinaryAdapter } = require("@keystonejs/file-adapters");
@@ -42,7 +42,11 @@ module.exports = {
     },
     projectType: {
       type: Select,
-      options: [{ value: "student", label: "Student" }, { value: "apollo", label: "Apollo" },{value:"jr",label:"JR"}],
+      options: [
+        { value: "student", label: "Student" },
+        { value: "apollo", label: "Apollo" },
+        { value: "jr", label: "JR" },
+      ],
       dataType: "string",
     },
     skills: {
@@ -56,7 +60,7 @@ module.exports = {
     brandImage: { type: String },
     body: {
       type: Text,
-      many:true
+      isMultiline: true,
     },
     rank: {
       type: Integer,
