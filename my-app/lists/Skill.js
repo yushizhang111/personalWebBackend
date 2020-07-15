@@ -41,6 +41,9 @@ module.exports = {
     },
     rank: {
       type:Integer,
+    },
+    tool: {
+      type:Boolean
     }
   },
   access: {
