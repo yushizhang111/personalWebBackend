@@ -1,4 +1,4 @@
-const { Text, Select } = require("@keystonejs/fields");
+const { Text, Select, Integer } = require("@keystonejs/fields");
 
 // Access control functions
 const userIsAdmin = ({ authentication: { item: user } }) =>
@@ -39,6 +39,9 @@ module.exports = {
       ],
       dataType: "string",
     },
+    rank: {
+      type:Integer,
+    }
   },
   access: {
     read: true,
